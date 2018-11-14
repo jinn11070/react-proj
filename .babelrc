@@ -1,0 +1,4 @@
+// ES6의 문법을 기존 자바스크립트의 문법으로 변환시켜 크로스브라우징 이슈를 해결
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
