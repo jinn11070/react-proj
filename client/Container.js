@@ -6,7 +6,7 @@ import React from "react";
 const Container = () => {
     return (
         <div>
-            <p class="title">Container</p>
+            <p className="title">Container</p>
             <p>여긴 내용 들어가여 두껍고 길어여</p>
         </div>
     );
