@@ -6,9 +6,10 @@ import Header from './Header';
 import Container from './Container';
 
 const App = () => {
+
     return (
         <div>
-            <h1>DeltaStream</h1>
+            <h1>DeltaStream </h1>
             <Header/>
             <Container/>
         </div>

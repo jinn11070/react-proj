@@ -1,8 +1,8 @@
 /**
  * Created by Jung Soo-jin on 2018-11-13.
  */
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     /*index.js 파일 내부 import 되는 모든 파일 묶겠음.*/
@@ -16,7 +16,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader'] 
+                use: ['babel-loader']
             },
             {
                 test: /\.scss$/,
@@ -38,7 +38,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx'],
     },
     /*파일 하나로 묶어서 export 하는 곳*/
     output: {
@@ -51,6 +51,11 @@ module.exports = {
     ],
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        open: true,
+        port: 8080,
+        proxy: {
+            "/": "http://localhost:3000"
+        }
     }
 }

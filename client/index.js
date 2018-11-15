@@ -4,6 +4,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from './App';
+// import * as ajax from './ajax';
 
 require('./scss/index.scss');
 
@@ -12,3 +13,5 @@ ReactDOM.render(
 );
 
 module.hot.accept();
+
+
