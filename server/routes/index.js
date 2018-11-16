@@ -3,7 +3,6 @@ var router = express.Router();
 var path = require('path');
 
 router.get('/', (req, res) => {
-    console.log("wefwef")
     res.send({
         info: "soojin!!!"
     });

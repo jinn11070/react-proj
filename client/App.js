@@ -10,7 +10,7 @@ class App extends Component {
         super(props);
 
         this.state = {
-            info: '',
+            title: '',
         };
     }
 
@@ -19,7 +19,7 @@ class App extends Component {
             .then(res => res.json())
             // .then(res => res.text())
             .then(data => {
-                this.setState({info:data.key})
+                this.setState({title: data.title})
             })
     }
 
@@ -30,7 +30,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>DeltaStreamlkok {this.state.info}</h1>
+                <h1>{this.state.title}</h1>
                 <Header/>
                 <Container/>
             </div>

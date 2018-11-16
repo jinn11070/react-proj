@@ -17,7 +17,7 @@ var server = http.createServer(app);
 /* MODULE START *********************************/
 app.get('/list', (req, res) => {
     // return res.send('pong');
-    return res.send({key:'weoifsdfjwsdfef'});
+    return res.send({title:'DeltaStream'});
 });
 /************************************************/
 
