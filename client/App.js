@@ -15,7 +15,6 @@ class App extends Component {
     }
 
     componentDidMount(){
-        console.log("-------------componentDidMount-------------:");
         fetch('/list')
             .then(res => res.json())
             // .then(res => res.text())
@@ -25,13 +24,10 @@ class App extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        console.log("-------------shouldComponentUpdate-------------: " + JSON.stringify(nextProps) + " " + JSON.stringify(nextState));
         return true;
     }
 
     render() {
-        console.log("-------------render-------------")
-
         return (
             <div>
                 <h1>DeltaStreamlkok {this.state.info}</h1>

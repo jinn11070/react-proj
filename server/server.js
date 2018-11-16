@@ -1,39 +1,25 @@
 var express = require('express');
 var path = require('path');
-var webpack = require('webpack');
 var http = require('http');
+
+// var index = require('./routes/index');
+// var hello = require('./routes/hello');
 
 /* Express 서버 설정 */
 const app = express();
 const port = 3000;
 
-// var index = require('./routes/index');
-// var hello = require('./routes/hello');
-
-
-/*var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', "*");
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-}
-
-app.use(allowCrossDomain);*/
-app.use('/', express.static(path.join(__dirname, './../dist')));
-
-// app.use(express.static(path.join(__dirname, './../dist')));
-// app.use('/', index);
-// app.use('/hello', hello);
-
 app.set('port', port);
+app.use('/', express.static(path.join(__dirname, './../dist'))); // <--- http://localhost:3000 으로 붙으면 dist 하위의 view를 보여준다.
 
 var server = http.createServer(app);
 
+/* MODULE START *********************************/
 app.get('/list', (req, res) => {
     // return res.send('pong');
-    return res.send({key:'soojin'});
-    // res.sendFile(path.join(__dirname, '../../dist/index.html'));
+    return res.send({key:'weoifsdfjwsdfef'});
 });
+/************************************************/
 
 server.listen(port, () => {
     console.log('Express is listening on port', port);
