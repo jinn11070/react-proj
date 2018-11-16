@@ -3,12 +3,17 @@
  */
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/index.scss';
 
+import App from "./App";
+
 ReactDOM.render(
-    <App/>, document.getElementById("root")
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    , document.getElementById('root')
 );
 
 module.hot.accept();

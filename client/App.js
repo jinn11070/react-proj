@@ -2,38 +2,28 @@
  * Created by Jung Soo-jin on 2018-11-13.
  */
 import React, { Component } from 'react';
-import Header from './Header';
-import Container from './Container';
+import { Route, Switch } from 'react-router-dom';
+
+import ConnectServer from "./ConnectServer";
+import Main from "./Main";
+
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            title: '',
-        };
-    }
-
-    componentDidMount(){
-        fetch('/list')
-            .then(res => res.json())
-            // .then(res => res.text())
-            .then(data => {
-                this.setState({title: data.title})
-            })
-    }
-
-    shouldComponentUpdate(nextProps, nextState){
-        return true;
-    }
-
     render() {
-        return (
+
+        const App = () => (
             <div>
-                <h1>{this.state.title}</h1>
-                <Header/>
-                <Container/>
+                <Switch>
+                    <Route exact path='/' component={ConnectServer}/>
+                    <Route path='/main' component={Main}/>
+                </Switch>
             </div>
+        )
+
+        return (
+            <Switch>
+                <App/>
+            </Switch>
         );
     }
 }
