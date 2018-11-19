@@ -10,7 +10,7 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            title: '',
+            data: '',
         };
     }
 
@@ -18,8 +18,8 @@ class Main extends Component {
         fetch('/header')
             .then(res => res.json())
             // .then(res => res.text())
-            .then(data => {
-                this.setState({title: data.title})
+            .then(result => {
+                this.setState({data: result.data})
             })
     }
 
@@ -30,7 +30,8 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
+                <h1>{this.state.data}</h1>
+                <h2></h2>
                 <Header/>
                 <Container/>
             </div>
