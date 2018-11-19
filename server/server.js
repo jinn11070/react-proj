@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var http = require('http');
 
-// var index = require('./routes/index');
+var header = require('./routes/header');
 
 /* Express 서버 설정 */
 const app = express();
@@ -14,10 +14,14 @@ var server = http.createServer(app);
 
 /* MODULE START *********************************/
 app.use('/', express.static(path.join(__dirname, './../dist'))); // <--- http://localhost:3000 으로 붙으면 dist 하위의 view를 보여준다.
-app.get('/header', (req, res) => {
-    // return res.send('pong');
-    return res.send({title:'DeltaStream'});
-});
+app.use('/header', header);
+// app.get('/header', (req, res) => {
+//     // return res.send('pong');
+//     return res.send({title:'DeltaStream'});
+// });
+
+
+
 
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'./../dist/index.html'));
