@@ -39,28 +39,12 @@ module.exports = {
                 test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif|pdf|ico)$/,
                 loader: 'file-loader',
                 options: {
-                    publicPath: './dist/images',
+                    outputPath: '/images',
+                    publicPath: '/images',
                     name: '[name].[ext]'
-                    // name: '[path][name].[ext]',
                 }
-
-                /*use: [
-                    {
-                        loader: 'url-loader?limit=100000',
-                        options: {
-                            name: '[path][name].[ext]',
-                            outputPath: __dirname + 'dist/images'
-                        }
-                    },
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            // name: '[path][name].[ext]',
-                            outputPath: __dirname + 'dist/images'
-                        }
-                    }
-                ]*/
             }
+
         ],
     },
     resolve: {
