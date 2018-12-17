@@ -1,5 +1,5 @@
 ### 기동순서
 1. server
-2. client
-3. build 
+2. client ( 빌드 없이 코드 변경 바로확인 가능 )
+3. build  ( 이미지 변경시 필수 /dist/이하에 반영됨.)
 
