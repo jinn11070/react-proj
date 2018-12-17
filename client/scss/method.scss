@@ -1,1 +1,18 @@
-$image-path: '/images';
+
+
+/* color | family | size | weight | letter spacing */
+@mixin font-default-style(
+  $color: $bass-font-color,
+  $family: 'Roboto medium',
+  $size: 13px,
+  $weight: normal,
+  $letter-spacing: -0.1px) {
+  letter-spacing: $letter-spacing;
+  font: {
+    family: $family, sans-serif;
+    weight: $weight;
+    size: $size;
+  }
+  text-decoration: none;
+  color: $color;
+}

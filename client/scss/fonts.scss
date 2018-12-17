@@ -1,0 +1,43 @@
+// Roboto Font
+@font-face {
+    font-family: 'Roboto black';
+    src: url(#{$font-path}/Roboto-Black-webfont.svg#RobotoRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto beld';
+    src: url(#{$font-path}/Roboto-Bold-webfont.svg#RobotoBold) format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto medium';
+    src: url(#{$font-path}/Roboto-Medium-webfont.svg#RobotoMedium) format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(#{$font-path}/Roboto-Regular-webfont.svg#RobotoRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto thin';
+    src: url(#{$font-path}/Roboto-Thin-webfont.svg#RobotoThin) format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto light';
+    src: url(#{$font-path}/Roboto-Light-webfont.svg#RobotoLight) format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
