@@ -3,23 +3,62 @@
 @import "~bootswatch/dist/flatly/bootswatch";
 @import "variables";
 @import "method";
-//@import "fonts";
 
+/* bootstrap custom */
+
+
+/* custom */
 #root {
   color: #ffffff;
   width: 100%;
-  height: inherit;
+  //height: 100%;
   @include font-default-style($white, $font-family-sans-serif, $font-size-base);
 }
 
 .login {
   width: 100%;
+  text-align: center;
 
   header {
-    display: grid;
-    height: 30em;
+    @include equal-height-lineheight($login-header-size);
     background: url(#{$image-path}/bg_login.png) no-repeat;
-    img { margin: 9em auto; }
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include equal-height-lineheight(8em);
+
+    background-color: #2a2a2a;
+    //@include font-default-style(#5e5e52, $font-family-sans-serif, $font-size-base);
+    @include font-default-style($gray-750, $font-family-sans-serif, $font-size-xs);
+  }
+
+  form {
+    width: 100%;
+    padding: 3em;
+
+    .form-group {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      display: inline-block;
+      width: 15%;
+      min-width: 210px;
+      font-size: $font-size-xs;
+    }
+
+    .btn-login {
+      background-color: #f36f20;
+      border-color: #f36f20;
+      @include font-default-style($white, $font-family-sans-serif, $font-size-base);
+    }
+
+  }
+
+
 }
 

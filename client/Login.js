@@ -26,61 +26,59 @@ class Login extends Component {
         return (
 
             <div className="login">
-                <header><img src={Images().logo_login}/></header>
+                <header><img src={Images().logo_login} className="img-fluid"/></header>
 
-                <Form horizontal>
+                <div className="login-form">
+                    <Form horizontal>
                     <FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Email
                         </Col>
-                        <Col sm={10}>
-                            <FormControl type="text" placeholder="Ip"/>
+                        <Col>
+                            <FormControl type="text" placeholder="IP Address"/>
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formHorizontalPassword">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Password
                         </Col>
-                        <Col sm={10}>
+                        <Col>
                             <FormControl type="text" placeholder="Port"/>
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Username
                         </Col>
-                        <Col sm={10}>
+                        <Col>
                             <FormControl type="text" placeholder="Username"/>
                         </Col>
                     </FormGroup>
 
                     <FormGroup controlId="formHorizontalPassword">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Password
                         </Col>
-                        <Col sm={10}>
+                        <Col>
                             <FormControl type="password" placeholder="Password"/>
                         </Col>
                     </FormGroup>
 
-                    <FormGroup>
-                        <Col smOffset={2} sm={10}>
-                            <Checkbox>Remember me</Checkbox>
-                        </Col>
-                    </FormGroup>
+                    {/*<FormGroup>*/}
+                        {/*<Col smOffset={2} >*/}
+                            {/*<Checkbox>Remember me</Checkbox>*/}
+                        {/*</Col>*/}
+                    {/*</FormGroup>*/}
 
                     <FormGroup>
-                        <Col smOffset={2} sm={10}>
+                        <Col smOffset={2} >
                             <LinkContainer to="/main">
-                                <Button bsStyle="primary" bsSize="small">Connect Server</Button>
+                                <Button bsStyle="login" bsSize="large">Connect Server</Button>
                             </LinkContainer>
                         </Col>
                     </FormGroup>
                 </Form>
+                </div>
 
-                <footer><img src={Images().logo_bottom}/></footer>
+                <footer><p>Copyright(C) 1999-2019 www.Datastreams.co.kr All Rights Reserved.</p></footer>
             </div>
         );
     }
