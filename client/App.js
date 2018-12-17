@@ -4,8 +4,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import logo from './images/logo.png'
-import logo_dstreams from './images/logo_dstreams.png'
+/* images */
+// import Images from "./Images";
+
 import ConnectServer from "./ConnectServer";
 import Main from "./Main";
 
@@ -15,12 +16,12 @@ class App extends Component {
 
         const App = () => (
             <div>
-                <img src={logo}/>
+                <img src={require('./images/logo_login.png')}/>
                 <Switch>
                     <Route exact path='/' component={ConnectServer}/>
                     <Route path='/main' component={Main}/>
                 </Switch>
-                <img src={logo_dstreams}/>
+                <img src={require('./images/logo_bottom.png')}/>
             </div>
         )
 

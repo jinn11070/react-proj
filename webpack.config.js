@@ -1,8 +1,8 @@
 /**
  * Created by Jung Soo-jin on 2018-11-13.
  */
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     /*index.js 파일 내부 import 되는 모든 파일 묶겠음.*/
