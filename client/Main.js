@@ -2,6 +2,7 @@
  * Created by Jung Soo-jin on 2018-11-13.
  */
 import React, { Component } from 'react';
+import fetch from 'isomorphic-fetch';
 import Header from './Header';
 import Container from './Container';
 
