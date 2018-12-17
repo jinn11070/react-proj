@@ -9,15 +9,17 @@
   color: #ffffff;
   width: 100%;
   height: inherit;
-  background: url(#{$image-path}/bg_login.png) no-repeat;
-  //font-family: $font-family-sans-serif, sans-serif;
   @include font-default-style($white, $font-family-sans-serif, $font-size-base);
+}
 
-  h1 {
-    color: red;
-  }
-  .title {
-    color: deeppink;
-    text-decoration: underline;
+.login {
+  width: 100%;
+
+  header {
+    display: grid;
+    height: 30em;
+    background: url(#{$image-path}/bg_login.png) no-repeat;
+    img { margin: 9em auto; }
   }
 }
+

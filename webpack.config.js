@@ -7,6 +7,7 @@ const path = require('path');
 module.exports = {
     /*index.js 파일 내부 import 되는 모든 파일 묶겠음.*/
     entry: [
+        "@babel/polyfill",
         'react-hot-loader/patch',
         './client/index.js'
     ],
@@ -15,7 +16,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /backup/],
                 use: ['babel-loader']
             },
             {

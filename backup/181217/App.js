@@ -4,11 +4,11 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-/* css */
-import './scss/index.scss';
+/* images */
+import Images from "./Images";
 
 /* pages */
-import Login from "./Login";
+import ConnectServer from "./ConnectServer";
 import Main from "./Main";
 
 class App extends Component {
@@ -16,10 +16,14 @@ class App extends Component {
 
         const App = () => (
             <div>
+                <img src={Images().logo_login}/>
+
                 <Switch>
-                    <Route exact path='/' component={Login}/>
+                    <Route exact path='/' component={ConnectServer}/>
                     <Route path='/main' component={Main}/>
                 </Switch>
+
+                <img src={Images().logo_bottom}/>
             </div>
         )
 

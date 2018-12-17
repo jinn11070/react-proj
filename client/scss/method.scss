@@ -16,3 +16,29 @@
   text-decoration: none;
   color: $color;
 }
+
+/* width == height */
+@mixin equal-width-height($size) {
+  width: $size;
+  height: $size;
+}
+
+
+/* width == height */
+@mixin equal-width-height($size) {
+  width: $size;
+  height: $size;
+}
+
+/* height == line-height  */
+@mixin equal-height-lineheight($height) {
+  height: $height;
+  line-height: $height;
+}
+
+/* init padding, margin */
+@mixin init-padding-margin() {
+  padding: 0px;
+  margin: 0px;
+}
+
